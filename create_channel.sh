@@ -16,7 +16,7 @@ create_channel_and_endpoints() {
     aws mediapackage create-channel \
         --id $channel_id \
         --description "$channel_name" \
-        --tags Key=Environment,Value=Dev
+        --tags Key=Environment,Value=Prod
 
     # Verificar se o canal foi criado corretamente
     if [ $? -ne 0 ]; then
